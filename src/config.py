@@ -1,0 +1,5 @@
+SKINS = ["Midas", "Renegade Raider", "Peely", "Aura", "Meowscles", "Travis Scott", "Skye"]
+LOCAIS = ["Torres Tortas", "Prado de Canto", "Cidadela", "Lago do Saque", "Bosque Choroso", "Mega City"]
+ARMAS = ["Rifle de Assalto", "Pump", "SMG", "Sniper", "Pistola"]
+RARIDADES = ["Comum", "Incomum", "Rara", "Épica", "Lendária"]
+EVENTOS = ["spawn", "loot", "kill", "move"]
