@@ -6,14 +6,13 @@ from src.config import SKINS, LOCAIS, ARMAS, RARIDADES, EVENTOS
 
 def rodar_jogo():
     conn, cursor = conectar()
-    print("🎮 Engine de Eventos Iniciada...")
+    print("Engine de Eventos Iniciada...")
 
     try:
         while True:
             evento = random.choice(EVENTOS)
             agora = datetime.now().isoformat()
             
-            # Resetando as variáveis para cada loop
             p, lo, ld, it, ra, vi = [None] * 6
 
             if evento == "spawn":
@@ -35,7 +34,6 @@ def rodar_jogo():
                 ld = random.choice([l for l in LOCAIS if l != lo])
                 print(f"[MOVE] {p} foi de {lo} para {ld}")
 
-            # Salva no Banco de Dados usando a função do database.py
             salvar_evento(conn, cursor, (evento, p, lo, ld, it, ra, vi, agora))
             time.sleep(1)
 
